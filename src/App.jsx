@@ -12,22 +12,23 @@ function App() {
     <main className="page">
       <header className="header">
         <a className="logo" href="#top"><span>AC</span> Aldo Carrillo</a>
-        <nav><a href="#work">Work</a><a href="#about">About</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:hello@example.com">Contact</a></nav>
+        <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:hello@example.com">Contact</a></nav>
       </header>
 
       <section className="hero" id="top">
         <div><p className="eyebrow">Frontend developer · New York</p>
         <h1>Building useful<br /><em>digital things.</em></h1>
-        <p className="intro-copy">I turn thoughtful ideas into fast, accessible web<br className="desktop-break" /> experiences with clean, dependable code.</p></div>
+        <p className="intro-copy">I turn thoughtful ideas into fast, accessible web<br className="desktop-break" /> experiences with clean, dependable code.</p>
+        <a className="hero-link" href="#work">Explore my work <span aria-hidden="true">↘</span></a></div>
         <div className="code-card"><span className="code-dots">● ● ●</span><code><i>const</i> developer = &#123;<br />&nbsp;&nbsp;name: <b>'Aldo Carrillo'</b>,<br />&nbsp;&nbsp;focus: <b>'the web'</b>,<br />&nbsp;&nbsp;available: <em>true</em><br />&#125;</code></div>
       </section>
 
       <section className="work" id="work">
-        <div className="section-heading"><h2>Selected projects</h2><span>2022—2024</span></div>
-        <div className="projects">{projects.map((project) => <article className="project" key={project.title}><a href={project.href} className="project-image"><img src={project.image} alt="" /><span>View project ↗</span></a><div className="project-info"><div><h3>{project.title}</h3><p>{project.description}</p><div className="stack">{project.stack.map((item) => <span key={item}>{item}</span>)}</div></div><div className="meta"><span>{project.type}</span><time>{project.year}</time></div></div></article>)}</div>
+        <div className="section-heading"><div><p className="eyebrow">A few things I’ve made</p><h2>Selected projects</h2></div><span>2022—2024</span></div>
+        <div className="projects">{projects.map((project) => <article className="project" key={project.title}><a href={project.href} className="project-image"><img src={project.image} alt="" /><span>View project <span aria-hidden="true">↗</span></span></a><div className="project-info"><div className="project-copy"><h3>{project.title}</h3><p>{project.description}</p><div className="stack">{project.stack.map((item) => <span key={item}>{item}</span>)}</div></div><div className="meta"><span>{project.type}</span><time>{project.year}</time></div></div></article>)}</div>
       </section>
 
-      <footer className="footer" id="about"><div><p>Have a project in mind?</p><a href="mailto:hello@example.com">hello@example.com ↗</a></div><span>© 2024 Aldo Carrillo · Built with React</span></footer>
+      <footer className="footer" id="about"><div className="footer-cta"><div><p>Have a project in mind?</p><h2>Let’s make it happen.</h2></div><a href="mailto:hello@example.com">Get in touch <span aria-hidden="true">↗</span></a></div><span className="copyright">© 2024 Aldo Carrillo · Built with React</span></footer>
     </main>
   )
 }
