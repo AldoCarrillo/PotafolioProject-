@@ -1,10 +1,10 @@
 import './App.css'
 
 const projects = [
-  { title: 'Daylight', type: 'Web app', year: '2024', stack: ['React', 'Node.js'], description: 'A quiet planning tool for making space around the work that matters.', image: 'https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=1000&q=85', href: '#' },
-  { title: 'Soft launch', type: 'Experiment', year: '2024', stack: ['Next.js', 'Stripe'], description: 'An experiment in making product updates feel more like a conversation.', image: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85', href: '#' },
-  { title: 'Moss & mineral', type: 'Website', year: '2023', stack: ['Astro', 'Contentful'], description: 'An online home for a small ceramics studio, shaped by material and light.', image: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85', href: '#' },
-  { title: 'Common ground', type: 'Identity', year: '2023', stack: ['TypeScript', 'WebGL'], description: 'A visual system for a community garden growing across three neighborhoods.', image: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1000&q=85', href: '#' },
+  { title: 'Daylight', type: 'Web app', year: '2024', stack: ['React', 'Node.js'], description: 'A quiet planning tool for making space around the work that matters.', image: '/projects/daylight.svg', href: '#' },
+  { title: 'Soft launch', type: 'Experiment', year: '2024', stack: ['Next.js', 'Stripe'], description: 'An experiment in making product updates feel more like a conversation.', image: '/projects/soft-launch.svg', href: '#' },
+  { title: 'Moss & mineral', type: 'Website', year: '2023', stack: ['Astro', 'Contentful'], description: 'An online home for a small ceramics studio, shaped by material and light.', image: '/projects/moss-mineral.svg', href: '#' },
+  { title: 'Common ground', type: 'Identity', year: '2023', stack: ['TypeScript', 'WebGL'], description: 'A visual system for a community garden growing across three neighborhoods.', image: '/projects/common-ground.svg', href: '#' },
 ]
 
 function App() {
