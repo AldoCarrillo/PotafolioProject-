@@ -11,6 +11,12 @@ const projects = [
     href: '/projects/weather-dashboard',
     category: 'INTERACTIVE TOOL',
   },
+  {
+    title: 'Note Taker',
+    image: '/assets/projects/note-taker.svg',
+    href: '/projects/note-taker',
+    category: 'INTERACTIVE TOOL',
+  },
   { title: 'Soft launch', image: '/assets/projects/soft-launch.svg' },
   { title: 'Moss & mineral', image: '/assets/projects/moss-mineral.svg' },
   { title: 'Common ground', image: '/assets/projects/common-ground.svg' },
