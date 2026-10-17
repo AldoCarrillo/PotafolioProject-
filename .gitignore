@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Local project source drop-off; keep its guide, but do not bundle submissions.
+projects-to-add/*
+!projects-to-add/README.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
