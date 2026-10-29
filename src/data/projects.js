@@ -41,9 +41,18 @@ const projects = [
     href: '/projects/fitness-tracker',
     category: 'INTERACTIVE TOOL',
   },
-  { title: 'Soft launch', image: '/assets/projects/soft-launch.svg' },
-  { title: 'Moss & mineral', image: '/assets/projects/moss-mineral.svg' },
-  { title: 'Common ground', image: '/assets/projects/common-ground.svg' },
+  {
+    title: 'README Generator',
+    image: '/assets/projects/readme-generator.svg',
+    href: '/projects/readme-generator',
+    category: 'DEVELOPER TOOL',
+  },
+  {
+    title: 'Team Builder',
+    image: '/assets/projects/team-builder.svg',
+    href: '/projects/team-builder',
+    category: 'TEAM MANAGEMENT',
+  },
 ]
 
 export default projects

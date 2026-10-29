@@ -23,6 +23,8 @@ src/
     fitness-tracker/            Workout tracker
     note-taker/                 Note-taking UI, behavior, and styles
     password-generator/        Password generator UI, behavior, and styles
+    readme-generator/          README generator UI, behavior, and styles
+    team-builder/              Employee roster and downloadable team page
     weather-dashboard/         Weather dashboard UI, behavior, and styles
     work-day-scheduler/         Hourly workday planner
   pages/                       Home and standalone project pages

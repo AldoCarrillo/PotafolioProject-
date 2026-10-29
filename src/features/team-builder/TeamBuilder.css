@@ -1,0 +1,61 @@
+.team-builder { display: grid; gap: 27px; min-width: 0; }
+.team-summary { background: #f7f9fb; border: 1px solid var(--line); border-radius: 14px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 16px 8px; }
+.team-summary > div { align-items: center; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 3px; min-width: 0; padding: 0 8px; }
+.team-summary > div:last-child { border-right: 0; }
+.team-summary strong { color: var(--ink); font: 500 21px 'DM Mono', monospace; }
+.team-summary span { color: var(--muted); font-size: 9px; text-align: center; }
+.team-form { background: #fbfcfd; border: 1px solid #e4e9ee; border-radius: 16px; padding: clamp(17px, 3vw, 25px); }
+.team-form-heading, .team-roster-heading { align-items: center; display: flex; gap: 14px; justify-content: space-between; }
+.team-kicker { color: var(--accent); font: 9px 'DM Mono', monospace; letter-spacing: .7px; margin: 0 0 7px; }
+.team-form h2, .team-roster h2 { font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -.03em; margin: 0; }
+.team-fields { display: grid; gap: 15px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 21px; }
+.team-field { color: var(--muted); display: grid; font-size: 10px; font-weight: 600; gap: 7px; min-width: 0; }
+.team-field input, .team-field select { background: #fff; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); font: 11px 'Sora', sans-serif; height: 39px; min-width: 0; padding: 0 11px; width: 100%; }
+.team-field input::placeholder { color: #9099a3; }
+.team-field input:focus-visible, .team-field select:focus-visible { outline: 3px solid #6797c8; outline-offset: 2px; }
+.team-form-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.team-form-actions button, .team-download-button, .team-remove-button { border: 0; border-radius: 999px; cursor: pointer; font: 600 10px 'Sora', sans-serif; min-height: 36px; padding: 0 15px; transition: background-color .2s ease, color .2s ease; }
+.team-add-button { background: var(--accent); color: #fff; }
+.team-add-button:hover { background: #245684; }
+.team-form-actions p { color: var(--muted); font-size: 9px; line-height: 1.5; margin: 0; }
+.team-roster { min-width: 0; }
+.team-roster-heading { border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+.team-download-button { background: var(--accent-soft); color: var(--accent); }
+.team-download-button:hover:not(:disabled) { background: #d7e5f3; }
+.team-download-button:disabled { cursor: not-allowed; opacity: .55; }
+.team-members { display: grid; gap: 13px; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-top: 16px; }
+.team-member { background: #fff; border: 1px solid #e8ebef; border-radius: 14px; min-width: 0; padding: 17px; }
+.team-avatar { align-items: center; background: var(--accent-soft); border-radius: 12px; color: var(--accent); display: flex; font: 500 14px 'DM Mono', monospace; height: 42px; justify-content: center; margin-bottom: 14px; width: 42px; }
+.team-avatar-engineer { background: #eaf3ec; color: #4a805f; }
+.team-avatar-intern { background: #fbefed; color: #b65b50; }
+.team-member-heading { align-items: flex-start; display: flex; gap: 8px; justify-content: space-between; }
+.team-member-heading h3 { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -.02em; margin: 7px 0 0; overflow-wrap: anywhere; }
+.team-role { border-radius: 999px; display: inline-block; font: 9px 'DM Mono', monospace; padding: 4px 8px; }
+.team-role-manager { background: var(--accent-soft); color: var(--accent); }
+.team-role-engineer { background: #eaf3ec; color: #4a805f; }
+.team-role-intern { background: #fbefed; color: #b65b50; }
+.team-remove-button { background: #f2f4f6; color: var(--muted); flex: 0 0 auto; min-height: 29px; padding: 0 10px; }
+.team-remove-button:hover { background: #fff0ee; color: #ad5149; }
+.team-member-email { color: var(--accent); display: inline-block; font-size: 10px; margin-top: 12px; overflow-wrap: anywhere; text-decoration: none; }
+.team-member-email:hover { text-decoration: underline; }
+.team-member-detail { align-items: baseline; border-top: 1px solid #e9edf0; display: flex; flex-wrap: wrap; gap: 5px 10px; justify-content: space-between; margin-top: 13px; padding-top: 11px; }
+.team-member-detail span { color: var(--muted); font-size: 9px; }
+.team-member-detail strong { color: var(--ink); font-size: 10px; font-weight: 600; overflow-wrap: anywhere; text-align: right; }
+.team-empty { align-items: center; background: #fbfcfd; border: 1px dashed #cbd4dd; border-radius: 14px; color: var(--muted); display: flex; flex-direction: column; margin-top: 16px; padding: 30px 16px; text-align: center; }
+.team-empty > span:first-child { align-items: center; background: var(--accent-soft); border-radius: 50%; color: var(--accent); display: flex; font-size: 21px; height: 38px; justify-content: center; width: 38px; }
+.team-empty p { color: var(--ink); font-size: 12px; font-weight: 600; margin: 12px 0 3px; }
+.team-empty > span:last-child { font-size: 10px; }
+.team-message { color: var(--muted); font-size: 10px; line-height: 1.5; margin: -20px 0 0; min-height: 15px; }
+.team-add-button:focus-visible, .team-download-button:focus-visible, .team-remove-button:focus-visible { outline: 3px solid #6797c8; outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  .team-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 13px; }
+  .team-summary > div:nth-child(2) { border-right: 0; }
+  .team-summary > div:nth-child(3), .team-summary > div:nth-child(4) { border-top: 1px solid var(--line); padding-top: 12px; }
+  .team-fields, .team-members { grid-template-columns: 1fr; }
+  .team-roster-heading { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-form-actions button, .team-download-button, .team-remove-button { transition-duration: .01ms; }
+}

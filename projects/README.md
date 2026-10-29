@@ -9,6 +9,8 @@ projects/
   fitness-tracker/
   note-taker/
   password-generator/
+  readme-generator/
+  team-builder/
   weather-dashboard/
   work-day-scheduler/
 ```

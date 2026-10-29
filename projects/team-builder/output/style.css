@@ -1,0 +1,25 @@
+
+.team-heading{
+
+    background: tomato;
+    color: whitesmoke;
+}
+
+.employee-card{
+    margin-right: 1rem;
+}
+
+.card-header {
+    background: dodgerblue;
+    color: whitesmoke;
+
+}
+
+.card-body{
+    background: lightskyblue;
+}
+
+.list-group{
+
+    background: whitesmoke;
+}
