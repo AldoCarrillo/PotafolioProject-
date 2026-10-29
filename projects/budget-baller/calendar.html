@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Baller</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.orbit.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation-float.min.css"
+    />
+    <!--google fonts link used for suggested styling-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="card" id="nav-bar">
+        <div class="card-section">
+          <div class="column"></div>
+          <div class="column">
+            <span class="label" id="BudgetBallers">Budget Savers</span>
+            <nav class="menu">
+              <ol>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./budget.html">Budget</a></li>
+                <li><a href="./calendar.html">Calendar</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Section, this will be hidden and only display when prompted through JavaScript -->
+    <div id="modal" class="modal-display">
+      <div id="modal-content3">
+        <form>
+          <h5>Enter New Reoccuring Payment</h5>
+          <!-- Expense Name -->
+          <label for="expense-name">Expense Name:</label>
+          <input
+            id="expense-name"
+            type="text"
+            placeholder="Example: Phone Bill"
+          />
+
+          <!-- Expense Amount -->
+          <label for="expense-amount">Amount:</label>
+          <input
+            id="expense-amount"
+            type="text"
+            placeholder="Example: $54.75"
+          />
+
+          <!-- Payment Type -->
+          <p>Select Payment:</p>
+          <input type="radio" id="bank-radio"  value="expense" name="expensemodal">
+          <label for="bank">Bank</label>
+          <input type="radio" id="card-radio"  value="expense" name="expensemodal">
+          <label for="card">Card</label>
+          <input type="radio" id="cash-radio"  value="expense" name="expensemodal">
+          <label for="cash">Cash</label><br>
+
+          <!-- Expense Frequency -->
+          <label for="expense-frequency">Frequency:</label>
+          <select name="frequency" id="select-frequency">
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="anually">Anually</option>
+          </select>
+
+          <!-- Expense Category -->
+          <label for="expense-category">Category:</label>
+          <select name="category" id="select-category">
+            <option value="Entertainment">Entertainment</option>
+            <option value="Eood">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Home">Home</option>
+            <option value="Car">Car</option>
+          </select>
+
+          <!-- Submit and Cancel buttons -->
+          <button id="modal-button-submit" type="button">Submit</button>
+          <button id="modal-button-cancel" type="button">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Calendar is built here -->
+    <div class="card calendar-container-div" id="month-generate">
+      <table>
+        <caption class="container-full">
+          <div class="columns medium-4">
+            <button type="button" class="button large success" id="previous-month">
+              Previous
+            </button>
+          </div>
+          <div class="columns medium-4 calendar-heading">
+            <span id="month"></span>
+            <span id="year"></span>
+          </div>
+          <div class="columns medium-4">
+            <button type="button" class="button large success" id="next-month">Next</button>
+          </div>
+        </caption>
+        <thead>
+          <tr class="weekday-row">
+            <th class="weekday">Sunday</th>
+            <th class="weekday">Monday</th>
+            <th class="weekday">Tuesday</th>
+            <th class="weekday">Wednesday</th>
+            <th class="weekday">Thursday</th>
+            <th class="weekday">Friday</th>
+            <th class="weekday">Saturday</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <div class="card"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./calendar.js"></script>
+  </body>
+</html>

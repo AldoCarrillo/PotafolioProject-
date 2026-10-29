@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Baller</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.orbit.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation-float.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="row">
+        <div class="card" id="nav-bar">
+          <div class="card-section">
+            <div class="column"></div>
+            <div class="column">
+              <span class="label" id="BudgetBallers">Budget Savers</span>
+              <nav class="menu">
+                <ol>
+                  <li><a id="home" href="./index.html">Home</a></li>
+                  <li><a href="./budget.html">Budget</a></li>
+                  <li><a href="./calendar.html">Calendar</a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="Budget-Button" class="button warning large"> SET BUDGETS </button>
+
+    <div class="row">
+
+        <div class="column" id="progressBar">
+
+          <div class="card budget-entertainment-card budget-cards">
+            <label for="Entertainment" ><h3>Entertainment</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-entertainment">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-entertainment">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
+            <progress id="entertainment-bar" max="100" value="80"></progress>
+            <p id="porcentage-Entertainment">0</p>
+          </div>
+
+          <div class="card budget-travel-card budget-cards">
+            <label for="travel"><h3>Travel</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-travel">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-travel">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
+            <progress id="travel-bar" max="100" value="22"></progress>
+            <p id="porcentage-Travel">0</p>
+          </div>
+
+          <div class="card budget-food-card budget-cards">
+            <label for="food"><h3>Food</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-food">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p id="total-food">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
+            <progress id="food-bar" max="100" value="35"></progress>
+            <p id="porcentage-Food">0</p>
+          </div>
+
+          <div class="card budget-home-card budget-cards">
+            <label for="home"><h3>Home</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-home">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-home">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
+            <progress id="home-bar" max="100" value="45"></progress>
+            <p id="porcentage-Home">0</p>
+          </div>
+
+          <div class="card budget-car-card budget-cards">
+            <label for="car"><h3>Car</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-car">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-car">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
+            <progress id="car-bar" max="100" value="90"></progress>
+            <p id="porcentage-Car">0</p>
+          </div>
+
+        </div>
+    </div>
+
+
+    <div id="modal3" class="modal-display">
+      <div id="modal-content3">
+
+          <div id="Budgets-modal">
+              <form>
+                  <h5>Set Budgets</h5>
+
+                  <label for="budget-food">Budget for Food:</label>
+                  <input id="budget-food" type="text" placeholder=" $1000">
+
+                  <label for="budget-travel">Budget for Travel:</label>
+                  <input id="budget-travel" type="text" placeholder=" $1000">
+
+                  <label for="budget-home">Budget for Home:</label>
+                  <input id="budget-home" type="text" placeholder=" $1000">
+
+                  <label for="budget-car">Budget for Car:</label>
+                  <input id="budget-car" type="text" placeholder=" $1000">
+
+                  <label for="budget-entertainment">Budget for Entertainment:</label>
+                  <input id="budget-entertainment" type="text" placeholder=" $1000">
+
+                  <button type = "button" id="modal3-button-submit">Submit</button>
+                  <button type = "button" id="modal3-button-cancel">Cancel</button>
+              </form>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="budget.js"></script>
+</body>
+</html>

@@ -12,9 +12,10 @@ dist
 dist-ssr
 *.local
 
-# Local project source drop-off; keep its guide, but do not bundle submissions.
-projects-to-add/*
-!projects-to-add/README.md
+# Keep secrets, dependencies, and generated output out of archived project sources.
+**/.env
+**/.env.*
+!**/.env.example
 
 # Editor directories and files
 .vscode/*

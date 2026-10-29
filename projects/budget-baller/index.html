@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Baller</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.orbit.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation-float.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="row" id="nav-gradient">
+        <div class="card" id="nav-bar">
+          <div class="card-section">
+            <div class="column"></div>
+            <div class="column">
+              <span class="label" id="BudgetBallers">Budget Savers</span>
+              <nav class="menu">
+                <ol>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./budget.html">Budget</a></li>
+                  <li><a href="./calendar.html">Calendar</a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- <div class="card">
+            <div class="first-card">
+                <img src="assets/background-color.jpg" alt="blue background" id="background">
+                <h1>Welcome!</h1>
+                <p>Start building your budget now.</p>
+                <button type="button" class="button success"> + Add expense</button>
+            </div>
+    </div> -->
+
+
+        <div class="row">
+
+            <div class="Main-Container">
+
+                <div class="columns large-4">
+                    <div class="card" id="bank-card-cash-container">
+                        <div id="Bank-Container">
+                            <h1>
+                                <img src="Assets/bank-large.png" alt="icon of a bank">
+                                Bank
+                            </h1>
+                            <div class="row">
+                                <div class="columns small-3"><img src="Assets/DOLLA-DOLLA-BILLS-large.png" alt="dollar bills sign" id="dollar-sign"></div>
+                                <div class="columns small-9"><p id="Bank-Amount"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns large-4">
+                    <div class="card" id="bank-card-cash-container">
+                        <div id="Cards-Container">
+                            <h1>
+                                <img src="Assets/credit-card-large.png" alt="icon of a credit card">
+                                Cards
+                            </h1>
+                            <div class="row">
+                                <div class="columns small-3"><img src="Assets/DOLLA-DOLLA-BILLS-large.png" alt="dollar bills sign" id="dollar-sign"></div>
+                                <div class="columns small-9"><p id="Card-Amount"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns large-4">
+                    <div class="card" id="bank-card-cash-container">
+                        <div id="Cash-Container">
+                            <h1>
+                                <img src="Assets/cash-large.png" alt="icon of a credit card">
+                                Cash
+                            </h1>
+                            <div class="row">
+                                <div class="columns small-3"><img src="Assets/DOLLA-DOLLA-BILLS-large.png" alt="dollar bills sign" id="dollar-sign"></div>
+                                <div class="columns small-9"><p id="Cash-Amount"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="card" id="Balance-Container">
+                    <h1>Balance</h1>
+                    <div class="row">
+                        <div class="columns small-3"><img src="Assets/DOLLA-DOLLA-BILLS-even-larger.png" alt="dollar bills sign" id="balance-dollar-sign"></div>
+                        <div class="columns small-9"><p id="Balance-Amount"> 900</p></div>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="row collapse IncomesOutcomes">
+            <div class="columns large-6">
+                <div class="card">
+                    <div >
+                        <div id="Incomes-Container">
+                            <p>Income</p>
+                            <div>
+                                <button type = "button" class = "success button"id="Add-Income"> ADD Income </button>
+                            </div>
+                            <div class="row" id = "Incomes-card">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                          <th style="text-align:center" width="10">Date</th>
+                                          <th style="text-align:center" width="50">Place</th>
+                                          <th style="text-align:center" width="200">Name</th>
+                                          <th style="text-align:center" width="10">Amount</th>
+                                        </tr>
+                                      </thead>
+                                    <tbody id="Incomes-List">
+                                        <tr >
+                                            <td id="date-income">[Date]</td>
+                                            <td id="place-income"><img src="./Assets/cash-large.png" alt="Cash"></td>
+                                            <td id="name-income">Paycheck</td>
+                                            <td id="amount-income"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns large-6">
+                <div class="card">
+                    <div id="Outcomes-Container">
+                        <p>Expenses</p>
+                            <div>
+                                <button type = "button" class = "alert button" id="Add-Expense"> ADD Expense </button>
+                            </div>
+
+                                <div class="row" id="outcomes-card">
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                            <th style="text-align:center" width="10">Date</th>
+                                            <th class="Outcomes-Table-Place" style="text-align:center" width="50">Place</th>
+                                            <th style="text-align:center" width="200">Name</th>
+                                            <th style="text-align:center" width="10">Amount</th>
+                                            <th class="Outcomes-Table-Category" style="text-align:center" width="150">Category</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="Expenses-List">
+                                          <tr>
+                                            <td id="date">[Date]</td>
+                                            <td id="place"><img src="Assets/cash.png" alt="a couple dollar bills"></td>
+                                            <td id = "name">Uber</td>
+                                            <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">24</td>
+                                            <td id="category">Travel</td>
+                                          </tr>
+                                          <tr>
+                                            <td id="date">[Date]</td>
+                                            <td id="place"><img src="Assets/bank.png" alt="icon of a bank"></td>
+                                            <td id = "name">McDonalds</td>
+                                            <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">10</td>
+                                            <td id="category">Food</td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<div id="modal" class="modal-display">
+    <div id="modal-content">
+
+        <div id="Outcome-modal">
+            <form>
+                <h5>New Expense</h5>
+                <!-- Expense Name -->
+                <label id = "label" for="expense-name">Expense Name:</label>
+                <input id="expense-name" type="text" placeholder="Example: Phone Bill">
+                <!-- Expense Amount -->
+                <label for="expense-amount">Amount:</label>
+                <input id="expense-amount" type="text" placeholder="Example: $54.75">
+
+                <p>Select Payment:</p>
+                <input type="radio" id="bank-radio"  value="expense" name="expensemodal">
+                <label for="bank">Bank</label>
+                <input type="radio" id="card-radio"  value="expense" name="expensemodal">
+                <label for="card">Card</label>
+                <input type="radio" id="cash-radio"  value="expense" name="expensemodal">
+                <label for="cash">Cash</label><br>
+                <!-- Expense Frequency -->
+                <label for="expense-frequency">Frequency:</label>
+                <select name="frequency" id="select-frequency">
+                    <option value="Once">Once</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Anually">Anually</option>
+                </select>
+                <!-- Expense Category -->
+                <label for="expense-category">Category:</label>
+                <select name="category" id="select-category">
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Home">Home</option>
+                    <option value="Car">Car</option>
+                    <option value="Bill">Bill</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+                <!-- Submit and Cancel buttons -->
+                <button type = "button" id="modal-button-submit">Submit</button>
+                <button type = "button" id="modal-button-cancel">Cancel</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="modal2" class="modal-display">
+    <div id="modal-content2">
+
+        <div id="Income-modal">
+            <form>
+                <h5>New Income</h5>
+                <!-- Expense Name -->
+                <label for="income-name">Income Name:</label>
+                <input id="income-name" type="text" placeholder="Example: Paycheck">
+                <!-- Expense Amount -->
+                <label for="income-amount">Amount:</label>
+                <input id="income-amount" type="text" placeholder="Example: $1000">
+
+                <p>Select the Account:</p>
+                <input type="radio" id="bank-radio-income" value="income" name="incomemodal">
+                <label for="bank">Bank</label>
+                <input type="radio" id="card-radio-income" value="income" name="incomemodal">
+                <label for="card">Card</label>
+                <input type="radio" id="cash-radio-income" value="income" name="incomemodal">
+                <label for="cash">Cash</label><br>
+                <!-- Expense Frequency -->
+                <label for="select-frequency">Frequency:</label>
+                <select name="frequency" id="income-frequency">
+                    <option value="Once">Once</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Anually">Anually</option>
+                </select>
+                <!-- Submit and Cancel buttons -->
+                <button type = "button" id="modal2-button-submit">Submit</button>
+                <button type = "button" id="modal2-button-cancel">Cancel</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="finance.js"></script>
+    <source src="src/assets/scss/_settings.scss">
+</body>
+</html>
