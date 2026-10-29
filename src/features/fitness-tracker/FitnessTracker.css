@@ -1,0 +1,65 @@
+.fitness-page { padding-bottom: clamp(24px, 5vw, 52px); }
+.fitness-tracker { --fitness-accent: #42785e; --fitness-accent-dark: #315b47; --fitness-accent-soft: #e8f1eb; }
+.fitness-overview, .fitness-panel { background: #fff; border: 1px solid #e6e9e6; border-radius: 17px; }
+.fitness-overview { background: #f3f7f2; margin-bottom: 14px; padding: 18px 20px; }
+.fitness-overview-heading { align-items: flex-start; display: flex; gap: 18px; justify-content: space-between; }
+.fitness-eyebrow { color: var(--fitness-accent); font: 9px 'DM Mono', monospace; letter-spacing: .7px; margin: 0 0 8px; }
+.fitness-overview h2 { font: 500 clamp(18px, 3vw, 23px)/1.3 'Sora', sans-serif; letter-spacing: -.05em; }
+.fitness-primary-button, .fitness-add-button { align-items: center; background: var(--fitness-accent); border: 0; border-radius: 999px; color: white; cursor: pointer; display: inline-flex; font: 600 11px 'Sora', sans-serif; gap: 9px; justify-content: center; min-height: 42px; padding: 0 17px; transition: background-color .2s ease, transform .2s ease; white-space: nowrap; }
+.fitness-primary-button:hover, .fitness-add-button:hover { background: var(--fitness-accent-dark); transform: translateY(-1px); }
+.fitness-primary-button > span { font-size: 16px; font-weight: 400; }
+.fitness-primary-button:focus-visible, .fitness-add-button:focus-visible, .fitness-type-switch button:focus-visible { outline: 3px solid #6797c8; outline-offset: 3px; }
+.fitness-columns { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+.fitness-panel { min-width: 0; padding: clamp(16px, 3vw, 22px); }
+.fitness-panel-heading { align-items: flex-end; display: flex; gap: 10px; justify-content: space-between; }
+.fitness-panel-heading .fitness-eyebrow { margin-bottom: 5px; }
+.fitness-panel-heading h2 { font: 600 15px 'Sora', sans-serif; letter-spacing: -.04em; }
+.fitness-session-date { color: var(--muted); font: 9px 'DM Mono', monospace; white-space: nowrap; }
+.fitness-empty { background: #f7f9f7; border-radius: 10px; margin-top: 14px; padding: 13px; }
+.fitness-empty p, .fitness-history-empty { color: var(--muted); font-size: 10px; line-height: 1.7; margin: 0; }
+.fitness-exercise-list, .fitness-history-list { list-style: none; margin: 17px 0 0; padding: 0; }
+.fitness-exercise-list { display: grid; gap: 7px; max-height: 220px; overflow-y: auto; }
+.fitness-exercise-list li { align-items: center; background: #f7f9f7; border: 1px solid #edf0ec; border-radius: 11px; display: flex; gap: 10px; min-width: 0; padding: 10px; }
+.fitness-exercise-icon { align-items: center; background: #e8efe8; border-radius: 9px; color: var(--fitness-accent); display: inline-flex; flex: 0 0 auto; font-size: 16px; height: 34px; justify-content: center; width: 34px; }
+.fitness-exercise-details { display: grid; gap: 4px; min-width: 0; }
+.fitness-exercise-details strong, .fitness-history-list strong { font: 600 10px 'Sora', sans-serif; overflow-wrap: anywhere; }
+.fitness-exercise-details small, .fitness-history-list small { color: var(--muted); font: 8px 'DM Mono', monospace; line-height: 1.5; }
+.fitness-type-tag { background: white; border: 1px solid #e7ebe6; border-radius: 999px; color: var(--muted); font: 8px 'DM Mono', monospace; margin-left: auto; padding: 5px 8px; text-transform: capitalize; }
+.fitness-exercise-form { border-top: 1px solid #e9ede9; margin-top: 17px; padding-top: 17px; }
+.fitness-form-heading { align-items: center; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-bottom: 14px; }
+.fitness-form-heading h3 { font: 600 11px 'Sora', sans-serif; }
+.fitness-type-switch { background: #f0f3f0; border-radius: 999px; display: inline-flex; gap: 3px; padding: 3px; }
+.fitness-type-switch button { background: transparent; border: 0; border-radius: 999px; color: var(--muted); cursor: pointer; font: 500 9px 'Sora', sans-serif; min-height: 26px; padding: 0 10px; }
+.fitness-type-switch button.is-selected { background: white; box-shadow: 0 1px 5px rgb(34 49 37 / 10%); color: var(--fitness-accent-dark); }
+.fitness-field { display: grid; gap: 6px; min-width: 0; }
+.fitness-field > span { color: #555e56; font: 9px 'Sora', sans-serif; }
+.fitness-field input { background: #fff; border: 1px solid #dfe5df; border-radius: 9px; color: var(--ink); font: 11px 'Sora', sans-serif; height: 39px; min-width: 0; padding: 0 10px; width: 100%; }
+.fitness-field input::placeholder { color: #a0a9a0; }
+.fitness-field input:focus-visible { border-color: var(--fitness-accent); outline: 3px solid #b9d1c0; outline-offset: 1px; }
+.fitness-field-grid { display: grid; gap: 11px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 11px; }
+.fitness-add-button { border-radius: 9px; font-size: 10px; margin-top: 13px; min-height: 38px; width: 100%; }
+.fitness-add-button span { font-size: 16px; }
+.fitness-history-list { display: grid; gap: 2px; margin-top: 12px; }
+.fitness-history-list li { align-items: center; border-bottom: 1px solid #edf0ed; display: flex; gap: 9px; min-width: 0; padding: 9px 0; }
+.fitness-history-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.fitness-history-list li > span:nth-child(2) { display: grid; gap: 4px; min-width: 0; }
+.fitness-history-mark { align-items: center; background: #f0f1f0; border-radius: 50%; color: var(--muted); display: inline-flex; flex: 0 0 auto; font-size: 10px; height: 27px; justify-content: center; width: 27px; }
+.fitness-history-mark.is-complete { background: var(--fitness-accent-soft); color: var(--fitness-accent); }
+.fitness-history-status { color: var(--muted); font: 8px 'DM Mono', monospace; margin-left: auto; }
+.fitness-history-empty { margin: 12px 0 0; }
+.fitness-storage-note { color: var(--muted); font: 8px 'DM Mono', monospace; margin: 12px 2px 0; }
+.fitness-status { background: #f2f6f2; border: 1px solid #dce9de; border-radius: 10px; color: #365b42; font-size: 10px; line-height: 1.6; margin: 12px 0 0; padding: 10px 13px; }
+
+@media (max-width: 760px) {
+  .fitness-panel { padding: 16px; }
+}
+
+@media (max-width: 560px) {
+  .fitness-overview-heading { align-items: flex-start; flex-direction: column; }
+  .fitness-primary-button { min-height: 39px; }
+  .fitness-overview { padding: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fitness-primary-button, .fitness-add-button { transition-duration: .01ms; }
+}

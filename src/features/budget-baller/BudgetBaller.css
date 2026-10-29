@@ -1,0 +1,91 @@
+.budget-baller { --budget-green: #4a805f; --budget-green-soft: #eaf3ec; --budget-red: #b65b50; --budget-red-soft: #fbefed; display: grid; gap: 14px; }
+.budget-summary, .budget-panel { background: white; border: 1px solid #e6ebf0; border-radius: 15px; }
+.budget-summary { background: linear-gradient(120deg, #f3f7f2, #f5f7f8); padding: clamp(16px, 3vw, 22px); }
+.budget-summary-heading, .budget-panel-heading { align-items: center; display: flex; gap: 12px; justify-content: space-between; }
+.budget-eyebrow { color: var(--accent); font: 9px 'DM Mono', monospace; letter-spacing: .7px; margin: 0 0 6px; }
+.budget-summary h2, .budget-panel-heading h2 { font: 600 15px 'Sora', sans-serif; letter-spacing: -.04em; margin: 0; }
+.budget-total { color: var(--ink); font: 500 clamp(23px, 4vw, 32px) 'DM Mono', monospace; letter-spacing: -.06em; }
+.budget-account-grid { display: grid; gap: 9px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 17px; }
+.budget-account { align-items: center; background: rgb(255 255 255 / 84%); border: 1px solid #e7ece8; border-radius: 11px; display: flex; gap: 10px; min-width: 0; padding: 11px; }
+.budget-account-icon { align-items: center; background: #eaf0f6; border-radius: 9px; color: var(--accent); display: inline-flex; flex: 0 0 auto; font: 600 11px 'DM Mono', monospace; height: 33px; justify-content: center; width: 33px; }
+.budget-account-icon.is-card { background: #f0edfa; color: #7562a2; }
+.budget-account-icon.is-cash { background: var(--budget-green-soft); color: var(--budget-green); }
+.budget-account > span:last-child { display: grid; gap: 4px; min-width: 0; }
+.budget-account small { color: var(--muted); font-size: 9px; }
+.budget-account strong { font: 500 clamp(11px, 1.8vw, 14px) 'DM Mono', monospace; overflow: hidden; text-overflow: ellipsis; }
+.budget-layout { align-items: start; display: grid; gap: 14px; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .8fr); }
+.budget-main-column, .budget-side-column { display: grid; gap: 14px; min-width: 0; }
+.budget-panel { min-width: 0; padding: clamp(15px, 2.7vw, 20px); }
+.budget-panel-heading > span { color: var(--muted); font: 9px 'DM Mono', monospace; }
+.budget-type-switch { background: #f0f3f5; border-radius: 999px; display: inline-flex; gap: 3px; margin: 15px 0 13px; padding: 3px; }
+.budget-type-switch button { background: transparent; border: 0; border-radius: 999px; color: var(--muted); cursor: pointer; font: 600 9px 'Sora', sans-serif; min-height: 29px; padding: 0 13px; }
+.budget-type-switch button.is-selected.is-expense { background: white; box-shadow: 0 1px 5px rgb(34 49 37 / 9%); color: var(--budget-red); }
+.budget-type-switch button.is-selected.is-income { background: white; box-shadow: 0 1px 5px rgb(34 49 37 / 9%); color: var(--budget-green); }
+.budget-transaction-form { display: grid; gap: 11px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.budget-field { display: grid; gap: 6px; min-width: 0; }
+.budget-field-wide { grid-column: 1 / -1; }
+.budget-field > span { color: #555e68; font: 9px 'Sora', sans-serif; }
+.budget-field input, .budget-field select, .budget-month-picker input { background: #fafbfc; border: 1px solid #e0e6eb; border-radius: 8px; color: var(--ink); font: 10px 'Sora', sans-serif; height: 36px; min-width: 0; padding: 0 9px; width: 100%; }
+.budget-field input:focus-visible, .budget-field select:focus-visible, .budget-month-picker input:focus-visible, .budget-edit-form input:focus-visible { border-color: var(--accent); outline: 3px solid #6797c8; outline-offset: 2px; }
+.budget-submit-button { align-items: center; background: var(--accent); border: 0; border-radius: 8px; color: white; cursor: pointer; display: inline-flex; font: 600 10px 'Sora', sans-serif; gap: 8px; grid-column: 1 / -1; justify-content: center; min-height: 38px; padding: 0 13px; transition: background-color .2s ease; }
+.budget-submit-button:hover { background: #245684; }
+.budget-submit-button.is-expense { background: var(--budget-red); }
+.budget-submit-button.is-expense:hover { background: #994940; }
+.budget-submit-button.is-income { background: var(--budget-green); }
+.budget-submit-button.is-income:hover { background: #39684c; }
+.budget-transaction-form button:focus-visible, .budget-type-switch button:focus-visible, .budget-edit-button:focus-visible, .budget-delete-button:focus-visible { outline: 3px solid #6797c8; outline-offset: 2px; }
+.budget-transactions-heading { margin-bottom: 10px; }
+.budget-transaction-list, .budget-category-list { list-style: none; margin: 0; padding: 0; }
+.budget-transaction-list li { align-items: center; border-top: 1px solid #edf0f3; display: flex; gap: 9px; min-width: 0; padding: 10px 0; }
+.budget-transaction-mark { align-items: center; border-radius: 50%; display: inline-flex; flex: 0 0 auto; font-size: 13px; height: 30px; justify-content: center; width: 30px; }
+.budget-transaction-mark.is-income { background: var(--budget-green-soft); color: var(--budget-green); }
+.budget-transaction-mark.is-expense { background: var(--budget-red-soft); color: var(--budget-red); }
+.budget-transaction-info { display: grid; gap: 4px; min-width: 0; }
+.budget-transaction-info strong { font: 600 10px 'Sora', sans-serif; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.budget-transaction-info small { color: var(--muted); font: 8px 'DM Mono', monospace; }
+.budget-transaction-amount { font: 500 10px 'DM Mono', monospace; margin-left: auto; white-space: nowrap; }
+.budget-transaction-amount.is-income, .budget-cash-flow .is-income { color: var(--budget-green); }
+.budget-transaction-amount.is-expense, .budget-cash-flow .is-expense { color: var(--budget-red); }
+.budget-delete-button { background: transparent; border: 0; border-radius: 6px; color: #89929b; cursor: pointer; flex: 0 0 auto; font-size: 16px; height: 26px; line-height: 1; width: 26px; }
+.budget-delete-button:hover { background: var(--budget-red-soft); color: var(--budget-red); }
+.budget-empty { color: var(--muted); font-size: 10px; line-height: 1.6; margin: 12px 0 0; }
+.budget-month-picker { display: block; width: 130px; }
+.budget-month-picker input { font: 9px 'DM Mono', monospace; }
+.budget-cash-flow { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 16px; }
+.budget-cash-flow > div { background: #f7f9fa; border: 1px solid #edf0f2; border-radius: 10px; display: grid; gap: 7px; padding: 12px 10px; }
+.budget-cash-flow span { color: var(--muted); font-size: 9px; }
+.budget-cash-flow strong { font: 500 14px 'DM Mono', monospace; }
+.budget-edit-button { background: var(--accent-soft); border: 0; border-radius: 999px; color: var(--accent); cursor: pointer; font: 600 9px 'Sora', sans-serif; min-height: 30px; padding: 0 12px; }
+.budget-edit-form { display: grid; gap: 9px; margin-top: 14px; }
+.budget-edit-form > label { align-items: center; color: #555e68; display: flex; font: 9px 'Sora', sans-serif; justify-content: space-between; }
+.budget-input-wrap { align-items: center; background: #fafbfc; border: 1px solid #e0e6eb; border-radius: 7px; color: var(--muted); display: flex; gap: 4px; padding-left: 8px; width: 118px; }
+.budget-input-wrap input { background: transparent; border: 0; color: var(--ink); font: 10px 'DM Mono', monospace; height: 31px; min-width: 0; outline: 0; padding: 0 6px 0 0; width: 100%; }
+.budget-edit-form .budget-submit-button { margin-top: 3px; }
+.budget-category-list { display: grid; gap: 12px; margin-top: 16px; }
+.budget-category-list li { display: grid; gap: 6px; }
+.budget-category-heading { align-items: baseline; display: flex; font: 9px 'Sora', sans-serif; gap: 8px; justify-content: space-between; }
+.budget-category-heading > strong { font-weight: 500; }
+.budget-category-heading > span { color: var(--ink); font: 9px 'DM Mono', monospace; white-space: nowrap; }
+.budget-limit { color: var(--muted); }
+.budget-progress { background: #edf0f3; border-radius: 999px; height: 6px; overflow: hidden; }
+.budget-progress > span { background: #7d9bb8; border-radius: inherit; display: block; height: 100%; transition: width .2s ease; }
+.budget-progress > span.is-over-budget { background: var(--budget-red); }
+.budget-storage-note { color: var(--muted); font: 8px 'DM Mono', monospace; margin: 0 2px; }
+.budget-message { background: #f1f5f9; border-radius: 9px; color: #435b72; font-size: 10px; line-height: 1.5; margin: 0; padding: 10px 12px; }
+
+@media (max-width: 760px) {
+  .budget-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .budget-summary-heading { align-items: flex-start; flex-direction: column; }
+  .budget-account-grid { gap: 6px; }
+  .budget-account { align-items: flex-start; flex-direction: column; gap: 7px; padding: 9px; }
+  .budget-account strong { font-size: 10px; }
+  .budget-transaction-list li { gap: 7px; }
+  .budget-transaction-amount { font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .budget-submit-button, .budget-progress > span { transition-duration: .01ms; }
+}

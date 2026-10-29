@@ -1,0 +1,49 @@
+.scheduler-page { padding-bottom: clamp(24px, 5vw, 52px); }
+.workday-scheduler { display: grid; gap: 14px; }
+.scheduler-toolbar, .scheduler-list-section { background: white; border: 1px solid #e6ebf0; border-radius: 15px; }
+.scheduler-toolbar { align-items: center; display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-between; padding: 18px clamp(16px, 3vw, 22px); }
+.scheduler-eyebrow { color: var(--accent); font: 9px 'DM Mono', monospace; letter-spacing: .7px; margin: 0 0 6px; }
+.scheduler-toolbar h2, .scheduler-list-heading h2 { font: 600 15px 'Sora', sans-serif; letter-spacing: -.04em; margin: 0; }
+.scheduler-date-controls { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; }
+.scheduler-date-controls label { color: var(--muted); font-size: 9px; font-weight: 600; }
+.scheduler-date-controls input { background: #f8f9fa; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font: 10px 'DM Mono', monospace; min-height: 36px; padding: 0 9px; }
+.scheduler-date-controls input:focus-visible, .scheduler-slot input:focus-visible { border-color: var(--accent); outline: 3px solid #6797c8; outline-offset: 2px; }
+.scheduler-today-button, .scheduler-clear-button { background: var(--accent-soft); border: 0; border-radius: 999px; color: var(--accent); cursor: pointer; font: 600 9px 'Sora', sans-serif; min-height: 32px; padding: 0 12px; }
+.scheduler-today-button:hover, .scheduler-clear-button:hover { background: #d7e5f3; }
+.scheduler-today-button:focus-visible, .scheduler-clear-button:focus-visible, .scheduler-save-button:focus-visible { outline: 3px solid #6797c8; outline-offset: 2px; }
+.scheduler-list-section { overflow: hidden; padding: clamp(16px, 3vw, 22px); }
+.scheduler-list-heading { align-items: center; display: flex; gap: 10px; justify-content: space-between; margin-bottom: 14px; }
+.scheduler-list-heading p { color: var(--muted); font: 9px 'DM Mono', monospace; margin: 5px 0 0; }
+.scheduler-slots { display: grid; }
+.scheduler-slot { align-items: center; border-top: 1px solid #edf0f3; display: grid; gap: 12px; grid-template-columns: minmax(88px, .34fr) minmax(0, 1fr) auto; min-width: 0; padding: 8px 0; }
+.scheduler-hour { align-items: center; color: #53606d; display: flex; font: 9px 'DM Mono', monospace; gap: 8px; margin: 0; white-space: nowrap; }
+.scheduler-hour-dot { background: #d0d7df; border-radius: 50%; flex: 0 0 auto; height: 7px; width: 7px; }
+.scheduler-slot.is-past .scheduler-hour-dot { background: #b7c1cc; }
+.scheduler-slot.is-past .scheduler-hour { color: #9099a3; }
+.scheduler-slot input:disabled { background: #f0f2f4; color: #737d88; cursor: not-allowed; }
+.scheduler-slot input:disabled::placeholder { color: #929aa3; }
+.scheduler-slot.is-current .scheduler-hour-dot { background: #5b9669; box-shadow: 0 0 0 3px #e5f0e7; }
+.scheduler-slot.is-current .scheduler-hour { color: #356b45; font-weight: 500; }
+.scheduler-now-label { background: #e8f2e9; border-radius: 999px; color: #356b45; font: 8px 'DM Mono', monospace; padding: 3px 6px; }
+.scheduler-slot input { background: #fafbfc; border: 1px solid #e6ebf0; border-radius: 8px; color: var(--ink); font: 10px 'Sora', sans-serif; height: 36px; min-width: 0; padding: 0 10px; width: 100%; }
+.scheduler-slot input::placeholder { color: #9aa3ad; }
+.scheduler-save-button { background: #edf3f8; border: 0; border-radius: 8px; color: var(--accent); cursor: pointer; font: 600 9px 'Sora', sans-serif; height: 34px; min-width: 53px; padding: 0 11px; }
+.scheduler-save-button:hover { background: #dce8f3; }
+.scheduler-save-button:disabled { background: #edf0f2; color: #929aa3; cursor: not-allowed; }
+.scheduler-note { color: var(--muted); font: 8px 'DM Mono', monospace; margin: 0 2px; }
+.scheduler-message { background: #f1f5f9; border-radius: 9px; color: #435b72; font-size: 10px; line-height: 1.5; margin: 0; padding: 10px 12px; }
+
+@media (max-width: 560px) {
+  .scheduler-toolbar { align-items: flex-start; flex-direction: column; }
+  .scheduler-date-controls { width: 100%; }
+  .scheduler-date-controls input { flex: 1; min-width: 0; }
+  .scheduler-slot { gap: 7px; grid-template-columns: 78px minmax(0, 1fr) auto; }
+  .scheduler-hour { font-size: 8px; gap: 5px; }
+  .scheduler-now-label { display: none; }
+  .scheduler-slot input { font-size: 9px; padding: 0 7px; }
+  .scheduler-save-button { min-width: 45px; padding: 0 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scheduler-today-button, .scheduler-clear-button, .scheduler-save-button { transition-duration: .01ms; }
+}
