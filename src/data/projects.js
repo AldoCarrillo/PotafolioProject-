@@ -24,6 +24,12 @@ const projects = [
     category: 'PERSONAL FINANCE',
   },
   {
+    title: 'Employee Tracker',
+    image: '/assets/projects/employee-tracker.svg',
+    href: '/projects/employee-tracker',
+    category: 'TEAM MANAGEMENT',
+  },
+  {
     title: 'Weather Dashboard',
     image: '/assets/projects/weather-dashboard.svg',
     href: '/projects/weather-dashboard',

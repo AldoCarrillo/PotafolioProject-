@@ -1,6 +1,7 @@
 import './styles/App.css'
 import BudgetBallerPage from './pages/BudgetBallerPage.jsx'
 import CodeQuizPage from './pages/CodeQuizPage.jsx'
+import EmployeeTrackerPage from './pages/EmployeeTrackerPage.jsx'
 import FitnessTrackerPage from './pages/FitnessTrackerPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import NoteTakerPage from './pages/NoteTakerPage.jsx'
@@ -31,6 +32,10 @@ function App() {
 
   if (path === '/projects/code-quiz') {
     return <CodeQuizPage />
+  }
+
+  if (path === '/projects/employee-tracker') {
+    return <EmployeeTrackerPage />
   }
 
   if (path === '/projects/work-day-scheduler') {
